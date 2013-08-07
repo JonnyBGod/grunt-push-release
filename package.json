@@ -1,7 +1,7 @@
 {
   "name": "grunt-push-release",
   "description": "Bump package version",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/JonnyBGod/grunt-push-release",
   "author": {
     "name": "Joao Ribeiro",
