@@ -64,7 +64,7 @@ $ grunt push-publish //Just publishes to NPM overriding (npm option: false)
 This shows all the available config options with their default values.
 
 ```js
-bump: {
+push: {
   options: {
     files: ['package.json'],
     updateConfigs: [],
