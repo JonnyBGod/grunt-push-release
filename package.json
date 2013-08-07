@@ -1,8 +1,8 @@
 {
-  "name": "grunt-release-push",
+  "name": "grunt-push-release",
   "description": "Bump package version",
-  "version": "0.0.2",
-  "homepage": "https://github.com/JonnyBGod/grunt-release-push",
+  "version": "0.0.3",
+  "homepage": "https://github.com/JonnyBGod/grunt-push-release",
   "author": {
     "name": "Joao Ribeiro",
     "email": "jonnybgod@gmail.com"
@@ -22,10 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/JonnyBGod/grunt-release-push.git"
+    "url": "git://github.com/JonnyBGod/grunt-push-release.git"
   },
   "bugs": {
-    "url": "https://github.com/JonnyBGod/grunt-release-push/issues"
+    "url": "https://github.com/JonnyBGod/grunt-push-release/issues"
   },
   "main": "grunt.js",
   "engines": {

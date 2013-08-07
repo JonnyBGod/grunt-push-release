@@ -1,4 +1,4 @@
-# grunt-release-push
+# grunt-push-release
 
 **Bump package version, create tag, commit, push...**
 
@@ -6,11 +6,11 @@
 
 Install npm package, next to your project's `Gruntfile.js` file:
 
-    npm install grunt-release-push --save-dev
+    npm install grunt-push-release --save-dev
 
 Add this line to your project's `Gruntfile.js`:
 
-    grunt.loadNpmTasks('grunt-release-push');
+    grunt.loadNpmTasks('grunt-push-release');
 
 
 ## Usage
@@ -56,6 +56,7 @@ $ grunt bump-only:minor
 $ grunt changelog
 $ grunt push-commit
 $ grunt push-release //This will do a full push and publish to npm even if you have configured npm option to false
+$ grunt push-publish //Just publishes to NPM overriding (npm option: false)
 ```
 
 ## Configuration

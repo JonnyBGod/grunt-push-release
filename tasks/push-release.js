@@ -60,6 +60,17 @@ module.exports = function(grunt) {
       opts.npm = false;
     }
 
+    if (incOrCommitOnly === 'push-publish') {
+      grunt.verbose.writeln('Publishing to NPM.');
+
+      opts.bumpVersion = false;
+      opts.add = false;
+      opts.commit = false;
+      opts.createTag = false;
+      opts.push = false;
+      opts.npm = true;
+    }
+
     var done = this.async();
     var queue = [];
     var next = function() {
@@ -222,5 +233,8 @@ module.exports = function(grunt) {
 
   DESC = 'Bump version, add, commit, tag, push and publish to NPM.';
   grunt.registerTask('push-release', DESC, 'push::push-release');
+
+  DESC = 'Just publish to NPM.';
+  grunt.registerTask('push-publish', DESC, 'push::push-publish');
 };
 
