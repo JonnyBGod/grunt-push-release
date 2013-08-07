@@ -232,9 +232,13 @@ module.exports = function(grunt) {
   grunt.registerTask('push-commit', DESC, 'push::commit-only');
 
   DESC = 'Bump version, add, commit, tag, push and publish to NPM.';
-  grunt.registerTask('push-release', DESC, 'push::push-release');
+  grunt.registerTask('push-release', DESC, function(versionType) {
+    grunt.task.run('push:' + (versionType || '') + ':push-release');
+  });
 
   DESC = 'Just publish to NPM.';
-  grunt.registerTask('push-publish', DESC, 'push::push-publish');
+  grunt.registerTask('push-publish', DESC, function(versionType) {
+    grunt.task.run('push:' + (versionType || '') + ':push-publish');
+  });
 };
 
