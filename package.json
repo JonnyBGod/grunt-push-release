@@ -1,13 +1,14 @@
 {
-  "name": "grunt-bump",
+  "name": "grunt-release-push",
   "description": "Bump package version",
-  "version": "0.0.11",
-  "homepage": "https://github.com/vojtajina/grunt-bump",
+  "version": "0.0.1",
+  "homepage": "https://github.com/JonnyBGod/grunt-release-push",
   "author": {
-    "name": "Vojta Jína",
-    "email": "vojta.jina@gmail.com"
+    "name": "Joao Ribeiro",
+    "email": "jonnybgod@gmail.com"
   },
   "contributors": [
+    "Vojta Jína vojta.jina@gmail.com",
     "Mathias Paumgarten <paumgarten@soapcreative.com>",
     "adam j. sontag <ajpiano@ajpiano.com>",
     "travis4all <travis4all@diamon.dz>",
@@ -21,10 +22,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/vojtajina/grunt-bump.git"
+    "url": "git://github.com/JonnyBGod/grunt-release-push.git"
   },
   "bugs": {
-    "url": "https://github.com/vojtajina/grunt-bump/issues"
+    "url": "https://github.com/JonnyBGod/grunt-release-push/issues"
   },
   "main": "grunt.js",
   "engines": {

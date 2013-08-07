@@ -1,4 +1,4 @@
-# grunt-bump
+# grunt-release-push
 
 **Bump package version, create tag, commit, push...**
 
@@ -6,11 +6,11 @@
 
 Install npm package, next to your project's `Gruntfile.js` file:
 
-    npm install grunt-bump --save-dev
+    npm install grunt-release-push --save-dev
 
 Add this line to your project's `Gruntfile.js`:
 
-    grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-release-push');
 
 
 ## Usage
@@ -54,7 +54,8 @@ Sometimes you want to run another task between bumping the version and commiting
 ```bash
 $ grunt bump-only:minor
 $ grunt changelog
-$ grunt bump-commit
+$ grunt push-commit
+$ grunt push-release //This will do a full push and publish to npm even if you have configured npm option to false
 ```
 
 ## Configuration
@@ -66,6 +67,8 @@ bump: {
   options: {
     files: ['package.json'],
     updateConfigs: [],
+    add: true,
+    addFiles: ['.'], // '.' for all files except ingored files in .gitignore
     commit: true,
     commitMessage: 'Release v%VERSION%',
     commitFiles: ['package.json'], // '-a' for all files
@@ -73,7 +76,9 @@ bump: {
     tagName: 'v%VERSION%',
     tagMessage: 'Version %VERSION%',
     push: true,
-    pushTo: 'upstream',
+    pushTo: 'origin',
+    npm: false,
+    npmTag: 'Release v%VERSION%',
     gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d' // options to use with '$ git describe'
   }
 }
@@ -91,6 +96,11 @@ bump: {
   updateConfigs: ['pkg',          'component']
 }
 ```
+### add
+Do you wanna add files ?
+
+### addFiles
+An array of files that you wanna add. You can use `['.']` to add all files.
 
 ### commit
 Do you wanna commit the changes ?
@@ -115,3 +125,14 @@ Do you wanna push all these changes ?
 
 ### pushTo
 If so, which remote branch would you like to push to ?
+
+### npm
+Do you wanna publish all these changes to NPM ?
+
+Make sure you have registered an npm used: 'npm adduser'
+
+### npmTag
+If so, what is the tag ? You can use `%VERSION%` which will get replaced with the new version.
+
+-----------------------------------
+Released under a MIT-style license.

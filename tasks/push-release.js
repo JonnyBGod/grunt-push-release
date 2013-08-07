@@ -17,25 +17,30 @@ var exec = require('child_process').exec;
 module.exports = function(grunt) {
 
   var DESC = 'Increment the version, commit, tag and push.';
-  grunt.registerTask('bump', DESC, function(versionType, incOrCommitOnly) {
+  grunt.registerTask('push', DESC, function(versionType, incOrCommitOnly) {
     var opts = this.options({
       bumpVersion: true,
       files: ['package.json'],
       updateConfigs: [], // array of config properties to update (with files)
+      add: true,
+      addFiles: ['.'], // '.' for all files except ingored files in .gitignore
       commit: true,
       commitMessage: 'Release v%VERSION%',
-      commitFiles: ['package.json'], // '-a' for all files
+      commitFiles: ['-a'], // '-a' for all files
       createTag: true,
       tagName: 'v%VERSION%',
       tagMessage: 'Version %VERSION%',
       push: true,
-      pushTo: 'upstream',
+      pushTo: 'origin',
+      npm: false,
+      npmTag: 'Release v%VERSION%',
       gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d'
     });
 
     if (incOrCommitOnly === 'bump-only') {
       grunt.verbose.writeln('Only incrementing the version.');
 
+      opts.add = false;
       opts.commit = false;
       opts.createTag = false;
       opts.push = false;
@@ -45,6 +50,14 @@ module.exports = function(grunt) {
       grunt.verbose.writeln('Only commiting/taggin/pushing.');
 
       opts.bumpVersion = false;
+    }
+
+    if (incOrCommitOnly === 'push-release') {
+      grunt.verbose.writeln('Pushing and publishing to NPM.');
+
+      opts.npm = true;
+    } else {
+      opts.npm = false;
     }
 
     var done = this.async();
@@ -130,6 +143,18 @@ module.exports = function(grunt) {
     });
 
 
+    // ADD
+    runIf(opts.add, function() {
+      exec('git add ' + opts.addFiles.join(' '), function(err, stdout, stderr) {
+        if (err) {
+          grunt.fatal('Can not add files:\n  ' + stderr);
+        }
+        grunt.log.ok('Added files: "' + opts.addFiles.join(' ') + '"');
+        next();
+      });
+    });
+
+
     // COMMIT
     runIf(opts.commit, function() {
       var commitMessage = opts.commitMessage.replace('%VERSION%', globalVersion);
@@ -170,6 +195,18 @@ module.exports = function(grunt) {
       });
     });
 
+
+    // PUBLISH CHANGES TO NPM
+    runIf(opts.npm, function() {
+      exec('npm publish --tag' + opts.npmTag, function(err, stdout, stderr) {
+        if (err) {
+          grunt.fatal('Publishing to NPM failed:\n  ' + stderr);
+        }
+        grunt.log.ok('Published to NPM with tag:' + opts.npmTag);
+        next();
+      });
+    });
+
     next();
   });
 
@@ -180,7 +217,10 @@ module.exports = function(grunt) {
     grunt.task.run('bump:' + (versionType || '') + ':bump-only');
   });
 
-  DESC = 'Commit, tag, push without incrementing the version.';
-  grunt.registerTask('bump-commit', DESC, 'bump::commit-only');
+  DESC = 'Add, commit, tag, push without incrementing the version.';
+  grunt.registerTask('push-commit', DESC, 'push::commit-only');
+
+  DESC = 'Bump version, add, commit, tag, push and publish to NPM.';
+  grunt.registerTask('push-release', DESC, 'push::push-release');
 };
 
