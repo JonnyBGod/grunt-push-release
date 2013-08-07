@@ -1,14 +1,14 @@
 {
   "name": "grunt-push-release",
   "description": "Bump package version",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/JonnyBGod/grunt-push-release",
   "author": {
     "name": "Joao Ribeiro",
     "email": "jonnybgod@gmail.com"
   },
   "contributors": [
-    "Vojta Jína vojta.jina@gmail.com",
+    "Vojta Jína <vojta.jina@gmail.com>",
     "Mathias Paumgarten <paumgarten@soapcreative.com>",
     "adam j. sontag <ajpiano@ajpiano.com>",
     "travis4all <travis4all@diamon.dz>",
