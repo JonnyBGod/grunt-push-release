@@ -215,7 +215,7 @@ module.exports = function(grunt) {
         if (err) {
           grunt.fatal('Publishing to NPM failed:\n  ' + stderr);
         }
-        grunt.log.ok('Published to NPM');
+        grunt.log.ok('Published to NPM with tag:' + opts.npmTag);
         next();
       });
     });
