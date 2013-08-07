@@ -209,11 +209,13 @@ module.exports = function(grunt) {
 
     // PUBLISH CHANGES TO NPM
     runIf(opts.npm, function() {
-      exec('npm publish --tag' + opts.npmTag, function(err, stdout, stderr) {
+      opts.npmTag.replace('%VERSION%', globalVersion);
+
+      exec('npm publish --tag "' + opts.npmTag + '"', function(err, stdout, stderr) {
         if (err) {
           grunt.fatal('Publishing to NPM failed:\n  ' + stderr);
         }
-        grunt.log.ok('Published to NPM with tag:' + opts.npmTag);
+        grunt.log.ok('Published to NPM');
         next();
       });
     });

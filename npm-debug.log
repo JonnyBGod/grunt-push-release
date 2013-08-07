@@ -1,0 +1,155 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--tag',
+1 verbose cli   'Release v%VERSION%' ]
+2 info using npm@1.3.5
+3 info using node@v0.10.15
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/joaoribeiro/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+12 verbose folder .
+13 info prepublish grunt-push-release@0.1.1
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/joaoribeiro/.npm/1f1177db-tar.lock
+16 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+17 verbose lock tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz /Users/joaoribeiro/.npm/101bb225-26233-0-2632653508335352-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+21 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+22 verbose tar unpack /var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+23 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+24 verbose lock tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package /Users/joaoribeiro/.npm/a28bc122-26233-0-2632653508335352-package.lock
+25 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+26 verbose lock tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz /Users/joaoribeiro/.npm/101bb225-26233-0-2632653508335352-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry .npmignore
+30 silly gunzTarPerm extractEntry README.md
+31 silly gunzTarPerm extractEntry LICENSE
+32 silly gunzTarPerm extractEntry Gruntfile.coffee
+33 silly gunzTarPerm extractEntry tasks/push-release.js
+34 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+35 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+36 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+37 silly lockFile 101bb225-26233-0-2632653508335352-tmp-tgz tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/tmp.tgz
+38 verbose tar pack [ '/Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz',
+38 verbose tar pack   '/var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package' ]
+39 verbose tarball /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+40 verbose folder /var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+41 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+42 verbose lock tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package /Users/joaoribeiro/.npm/a28bc122-26233-0-2632653508335352-package.lock
+43 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+44 verbose lock tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz /Users/joaoribeiro/.npm/f5f43b13-t-push-release-0-1-1-package-tgz.lock
+45 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+46 silly lockFile a28bc122-26233-0-2632653508335352-package tar:///var/folders/tk/w8fbgb9918d3snhhw7r78d9h0000gn/T/npm-58303-GcNmae4K/1375889126233-0.2632653508335352/package
+47 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+48 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+49 silly lockFile 0cb9b098-grunt-push-release-0-1-1-package /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+50 verbose lock /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package /Users/joaoribeiro/.npm/0cb9b098-grunt-push-release-0-1-1-package.lock
+51 silly lockFile 0cb9b098-grunt-push-release-0-1-1-package /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+52 silly lockFile 0cb9b098-grunt-push-release-0-1-1-package /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+53 verbose tar unpack /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+54 silly lockFile 04d568b4-grunt-push-release-0-1-1-package tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+55 verbose lock tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package /Users/joaoribeiro/.npm/04d568b4-grunt-push-release-0-1-1-package.lock
+56 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+57 verbose lock tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz /Users/joaoribeiro/.npm/f5f43b13-t-push-release-0-1-1-package-tgz.lock
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 silly gunzTarPerm extractEntry package.json
+60 silly gunzTarPerm extractEntry .npmignore
+61 silly gunzTarPerm extractEntry README.md
+62 silly gunzTarPerm extractEntry LICENSE
+63 silly gunzTarPerm extractEntry Gruntfile.coffee
+64 silly gunzTarPerm extractEntry tasks/push-release.js
+65 silly lockFile 04d568b4-grunt-push-release-0-1-1-package tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+66 silly lockFile 04d568b4-grunt-push-release-0-1-1-package tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package
+67 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+68 silly lockFile f5f43b13-t-push-release-0-1-1-package-tgz tar:///Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz
+69 verbose chmod /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz 644
+70 verbose chown /Users/joaoribeiro/.npm/grunt-push-release/0.1.1/package.tgz [ 501, 20 ]
+71 silly lockFile 3a52ce78- .
+72 silly lockFile 3a52ce78- .
+73 silly publish { name: 'grunt-push-release',
+73 silly publish   description: 'Bump package version',
+73 silly publish   version: '0.1.1',
+73 silly publish   homepage: 'https://github.com/JonnyBGod/grunt-push-release',
+73 silly publish   author: { name: 'Joao Ribeiro', email: 'jonnybgod@gmail.com' },
+73 silly publish   contributors:
+73 silly publish    [ { name: 'Vojta Jína vojta.jina@gmail.com' },
+73 silly publish      { name: 'Mathias Paumgarten',
+73 silly publish        email: 'paumgarten@soapcreative.com' },
+73 silly publish      { name: 'adam j. sontag', email: 'ajpiano@ajpiano.com' },
+73 silly publish      { name: 'travis4all', email: 'travis4all@diamon.dz' },
+73 silly publish      { name: 'RobinQu', email: 'robinqu@gmail.com' },
+73 silly publish      { name: 'Snugug', email: 'snugug@gmail.com' },
+73 silly publish      { name: 'Adam Biggs', email: 'adam.biggs@lightmaker.com' },
+73 silly publish      { name: 'ylesaout', email: 'ylesaout@gmail.com' },
+73 silly publish      { name: 'Gavin', email: 'gavin@kodekoan.com' },
+73 silly publish      { name: 'Mathias Paumgarten',
+73 silly publish        email: 'mail@mathias-paumgarten.com' },
+73 silly publish      { name: 'Mayhem', email: 'stepien.nicolas@gmail.com' } ],
+73 silly publish   repository:
+73 silly publish    { type: 'git',
+73 silly publish      url: 'git://github.com/JonnyBGod/grunt-push-release.git' },
+73 silly publish   bugs: { url: 'https://github.com/JonnyBGod/grunt-push-release/issues' },
+73 silly publish   main: 'grunt.js',
+73 silly publish   engines: { node: '>= 0.8.0' },
+73 silly publish   scripts: { test: 'grunt test' },
+73 silly publish   dependencies: { semver: '~1.1' },
+73 silly publish   peerDependencies: { grunt: '~0.4' },
+73 silly publish   devDependencies:
+73 silly publish    { grunt: '~0.4',
+73 silly publish      'grunt-npm': '~0.0.1',
+73 silly publish      'grunt-auto-release': '~0.0.3' },
+73 silly publish   keywords: [ 'gruntplugin' ],
+73 silly publish   readme: '# grunt-push-release\n\n**Bump package version, create tag, commit, push...**\n\n## Installation\n\nInstall npm package, next to your project\'s `Gruntfile.js` file:\n\n    npm install grunt-push-release --save-dev\n\nAdd this line to your project\'s `Gruntfile.js`:\n\n    grunt.loadNpmTasks(\'grunt-push-release\');\n\n\n## Usage\n\nLet\'s say current version is `0.0.1`.\n\n````\n$ grunt bump\n>> Version bumped to 0.0.2\n>> Committed as "Release v0.0.2"\n>> Tagged as "v0.0.2"\n>> Pushed to origin\n\n$ grunt bump:patch\n>> Version bumped to 0.0.3\n>> Committed as "Release v0.0.3"\n>> Tagged as "v0.0.3"\n>> Pushed to origin\n\n$ grunt bump:minor\n>> Version bumped to 0.1.0\n>> Committed as "Release v0.1.0"\n>> Tagged as "v0.1.0"\n>> Pushed to origin\n\n$ grunt bump:major\n>> Version bumped to 1.0.0\n>> Committed as "Release v1.0.0"\n>> Tagged as "v1.0.0"\n>> Pushed to origin\n\n$ grunt bump:git\n>> Version bumped to 1.0.0-1-ge96c\n>> Committed as "Release v1.0.0-1-ge96c"\n>> Tagged as "v1.0.0-1-ge96c"\n>> Pushed to origin\n````\n\nSometimes you want to run another task between bumping the version and commiting, for instance generate changelog. You can use `bump-only` and `bump-commit` to achieve that:\n\n```bash\n$ grunt bump-only:minor\n$ grunt changelog\n$ grunt push-commit\n$ grunt push-release //This will do a full push and publish to npm even if you have configured npm option to false\n$ grunt push-publish //Just publishes to NPM overriding (npm option: false)\n```\n\n## Configuration\n\nThis shows all the available config options with their default values.\n\n```js\nbump: {\n  options: {\n    files: [\'package.json\'],\n    updateConfigs: [],\n    add: true,\n    addFiles: [\'.\'], // \'.\' for all files except ingored files in .gitignore\n    commit: true,\n    commitMessage: \'Release v%VERSION%\',\n    commitFiles: [\'package.json\'], // \'-a\' for all files\n    createTag: true,\n    tagName: \'v%VERSION%\',\n    tagMessage: \'Version %VERSION%\',\n    push: true,\n    pushTo: \'origin\',\n    npm: false,\n    npmTag: \'Release v%VERSION%\',\n    gitDescribeOptions: \'--tags --always --abbrev=1 --dirty=-d\' // options to use with \'$ git describe\'\n  }\n}\n```\n\n### files\nList of files to bump. Maybe you wanna bump \'component.json\' as well ?\n\n### updateConfigs\nSometimes you load the content of `package.json` into a grunt config. This will update the config property, so that even tasks running in the same grunt process see the updated value.\n\n```js\nbump: {\n  files:         [\'package.json\', \'bower.json\'],\n  updateConfigs: [\'pkg\',          \'bower\']\n}\n```\n### add\nDo you wanna add files ?\n\n### addFiles\nAn array of files that you wanna add. You can use `[\'.\']` to add all files.\n\n### commit\nDo you wanna commit the changes ?\n\n### commitMessage\nIf so, what is the commit message ? You can use `%VERSION%` which will get replaced with the new version.\n\n### commitFiles\nAn array of files that you wanna commit. You can use `[\'-a\']` to commit all files.\n\n### createTag\nDo you wanna create a tag ?\n\n### tagName\nIf so, this is the name of that tag (`%VERSION%` placeholder is available).\n\n### tagMessage\nYep, you guessed right, it\'s the message of that tag - description (`%VERSION%` placeholder is available).\n\n### push\nDo you wanna push all these changes ?\n\n### pushTo\nIf so, which remote branch would you like to push to ?\n\n### npm\nDo you wanna publish all these changes to NPM ?\n\nMake sure you have registered an npm used: \'npm adduser\'\n\n### npmTag\nIf so, what is the tag ? You can use `%VERSION%` which will get replaced with the new version.\n\n-----------------------------------\nReleased under a MIT-style license.',
+73 silly publish   readmeFilename: 'README.md',
+73 silly publish   _id: 'grunt-push-release@0.1.1',
+73 silly publish   dist: { shasum: 'b4154ae20dc9682a85282d7ea0562b5db4405685' },
+73 silly publish   _from: '.' }
+74 verbose url raw grunt-push-release
+75 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-push-release' ]
+76 verbose url resolved https://registry.npmjs.org/grunt-push-release
+77 info trying registry request attempt 1 at 16:25:26
+78 http PUT https://registry.npmjs.org/grunt-push-release
+79 http 409 https://registry.npmjs.org/grunt-push-release
+80 verbose url raw grunt-push-release
+81 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-push-release' ]
+82 verbose url resolved https://registry.npmjs.org/grunt-push-release
+83 info trying registry request attempt 1 at 16:25:27
+84 http GET https://registry.npmjs.org/grunt-push-release
+85 http 200 https://registry.npmjs.org/grunt-push-release
+86 error publish fail Cannot publish over existing version.
+86 error publish fail Update the 'version' field in package.json and try again.
+86 error publish fail
+86 error publish fail If the previous version was published in error, see:
+86 error publish fail     npm help unpublish
+86 error publish fail
+86 error publish fail To automatically increment version numbers, see:
+86 error publish fail     npm help version
+87 error System Darwin 11.4.2
+88 error command "node" "/usr/local/bin/npm" "publish" "--tag" "Release v%VERSION%"
+89 error cwd /Users/joaoribeiro/Documents/Projects/grunt-push-release
+90 error node -v v0.10.15
+91 error npm -v 1.3.5
+92 error code EPUBLISHCONFLICT
+93 verbose exit [ 1, true ]

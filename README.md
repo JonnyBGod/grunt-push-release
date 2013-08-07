@@ -93,8 +93,8 @@ Sometimes you load the content of `package.json` into a grunt config. This will 
 
 ```js
 bump: {
-  files:         ['package.json', 'component.json'],
-  updateConfigs: ['pkg',          'component']
+  files:         ['package.json', 'bower.json'],
+  updateConfigs: ['pkg',          'bower']
 }
 ```
 ### add
