@@ -227,7 +227,7 @@ module.exports = function(grunt) {
   // ALIASES
   DESC = 'Increment the version only.';
   grunt.registerTask('bump-only', DESC, function(versionType) {
-    grunt.task.run('bump:' + (versionType || '') + ':bump-only');
+    grunt.task.run('push:' + (versionType || '') + ':bump-only');
   });
 
   DESC = 'Add, commit, tag, push without incrementing the version.';
