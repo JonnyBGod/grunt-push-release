@@ -18,31 +18,31 @@ Add this line to your project's `Gruntfile.js`:
 Let's say current version is `0.0.1`.
 
 ````
-$ grunt bump
+$ grunt push
 >> Version bumped to 0.0.2
 >> Committed as "Release v0.0.2"
 >> Tagged as "v0.0.2"
 >> Pushed to origin
 
-$ grunt bump:patch
+$ grunt push:patch
 >> Version bumped to 0.0.3
 >> Committed as "Release v0.0.3"
 >> Tagged as "v0.0.3"
 >> Pushed to origin
 
-$ grunt bump:minor
+$ grunt push:minor
 >> Version bumped to 0.1.0
 >> Committed as "Release v0.1.0"
 >> Tagged as "v0.1.0"
 >> Pushed to origin
 
-$ grunt bump:major
+$ grunt push:major
 >> Version bumped to 1.0.0
 >> Committed as "Release v1.0.0"
 >> Tagged as "v1.0.0"
 >> Pushed to origin
 
-$ grunt bump:git
+$ grunt push:git
 >> Version bumped to 1.0.0-1-ge96c
 >> Committed as "Release v1.0.0-1-ge96c"
 >> Tagged as "v1.0.0-1-ge96c"
@@ -52,7 +52,7 @@ $ grunt bump:git
 Sometimes you want to run another task between bumping the version and commiting, for instance generate changelog. You can use `bump-only` and `bump-commit` to achieve that:
 
 ```bash
-$ grunt bump-only:minor
+$ grunt push-only:minor
 $ grunt changelog
 $ grunt push-commit
 $ grunt push-release //This will do a full push and publish to npm even if you have configured npm option to false
