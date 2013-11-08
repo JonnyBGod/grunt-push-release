@@ -99,8 +99,8 @@ push: {
 }
 ```
 
-### releaseBrach
-Define branch(es) from which it is allowed to make releases. Either define a single one as string or severals as array. This might help you not to accidentially make a release on a topic branch.
+### releaseBranch
+Define branch(es) on which it is allowed to make releases. Either define a single one as string or severals as array. This helps to not accidentially make a release on a topic branch.
 
 ```js
 push: {
