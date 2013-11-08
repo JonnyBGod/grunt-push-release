@@ -1,11 +1,11 @@
 /*
  * Increase version number
  *
- * grunt bump
- * grunt bump:git
- * grunt bump:patch
- * grunt bump:minor
- * grunt bump:major
+ * grunt push
+ * grunt push:git
+ * grunt push:patch
+ * grunt push:minor
+ * grunt push:major
  *
  * @author Vojta Jina <vojta.jina@gmail.com>
  * @author Mathias Paumgarten <mail@mathias-paumgarten.com>
