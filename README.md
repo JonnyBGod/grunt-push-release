@@ -68,6 +68,7 @@ push: {
   options: {
     files: ['package.json'],
     updateConfigs: [],
+    releaseBranch: false,
     add: true,
     addFiles: ['.'], // '.' for all files except ingored files in .gitignore
     commit: true,
@@ -92,11 +93,21 @@ List of files to bump. Maybe you wanna bump 'component.json' as well ?
 Sometimes you load the content of `package.json` into a grunt config. This will update the config property, so that even tasks running in the same grunt process see the updated value.
 
 ```js
-bump: {
+push: {
   files:         ['package.json', 'bower.json'],
   updateConfigs: ['pkg',          'bower']
 }
 ```
+
+### releaseBranch
+Define branch(es) on which it is allowed to make releases. Either define a single one as string or severals as array. This helps to not accidentially make a release on a topic branch.
+
+```js
+push: {
+  releaseBranch: ['develop', 'master']
+}
+```
+
 ### add
 Do you wanna add files ?
 

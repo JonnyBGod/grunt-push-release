@@ -1,15 +1,16 @@
 /*
  * Increase version number
  *
- * grunt bump
- * grunt bump:git
- * grunt bump:patch
- * grunt bump:minor
- * grunt bump:major
+ * grunt push
+ * grunt push:git
+ * grunt push:patch
+ * grunt push:minor
+ * grunt push:major
  *
  * @author Vojta Jina <vojta.jina@gmail.com>
  * @author Mathias Paumgarten <mail@mathias-paumgarten.com>
  * @author Adam Biggs <email@adambig.gs>
+ * @author Achim Sperling <achim.sperling@gmail.com>
  */
 var semver = require('semver');
 var exec = require('child_process').exec;
@@ -22,6 +23,7 @@ module.exports = function(grunt) {
       bumpVersion: true,
       files: ['package.json'],
       updateConfigs: [], // array of config properties to update (with files)
+      releaseBranch: false,
       add: true,
       addFiles: ['.'], // '.' for all files except ingored files in .gitignore
       commit: true,
@@ -84,6 +86,34 @@ module.exports = function(grunt) {
         queue.push(behavior);
       }
     };
+
+
+    // MAKE SURE WE'RE ON A RELEASE BRANCH
+    runIf(opts.releaseBranch, function() {
+      if (opts.npm || opts.commit || opts.push) {
+        exec('git rev-parse --abbrev-ref HEAD', function(err, stdout, stderr) {
+          
+          if (err || stderr) {
+            grunt.fatal('Cannot determine current branch.');
+          }
+
+          var currentBranch = stdout.trim();
+          var rBranches = (typeof opts.releaseBranch == 'string') ? [opts.releaseBranch] : opts.releaseBranch;
+
+          rBranches.forEach(function(rBranch) {
+            if (rBranch == currentBranch) {
+              return next();
+            }
+          });
+
+          grunt.warn('The current branch is not in the list of release branches.');
+
+          // Allow for --force
+          next();
+        });
+      }
+    });
+    
 
     var globalVersion; // when bumping multiple files
     var gitVersion;    // when bumping using `git describe`
