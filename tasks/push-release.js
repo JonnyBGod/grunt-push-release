@@ -10,6 +10,7 @@
  * @author Vojta Jina <vojta.jina@gmail.com>
  * @author Mathias Paumgarten <mail@mathias-paumgarten.com>
  * @author Adam Biggs <email@adambig.gs>
+ * @author Achim Sperling <achim.sperling@gmail.com>
  */
 var semver = require('semver');
 var exec = require('child_process').exec;
