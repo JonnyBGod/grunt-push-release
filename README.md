@@ -68,6 +68,7 @@ push: {
   options: {
     files: ['package.json'],
     updateConfigs: [],
+    releaseBranch: false,
     add: true,
     addFiles: ['.'], // '.' for all files except ingored files in .gitignore
     commit: true,
@@ -97,6 +98,16 @@ push: {
   updateConfigs: ['pkg',          'bower']
 }
 ```
+
+### releaseBrach
+Define branch(es) from which it is allowed to make releases. Either define a single one as string or severals as array. This might help you not to accidentially make a release on a topic branch.
+
+```js
+push: {
+  releaseBranch: ['develop', 'master']
+}
+```
+
 ### add
 Do you wanna add files ?
 
