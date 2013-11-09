@@ -108,10 +108,10 @@ module.exports = function(grunt) {
 
           grunt.warn('The current branch is not in the list of release branches.');
 
-          // Allow for --force
-          next();
         });
       }
+      
+      next();
     });
     
 
