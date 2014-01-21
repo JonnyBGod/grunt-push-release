@@ -148,3 +148,7 @@ If so, what is the tag ? You can use `%VERSION%` which will get replaced with th
 
 -----------------------------------
 Released under a MIT-style license.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JonnyBGod/grunt-push-release/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
