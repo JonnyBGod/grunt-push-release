@@ -49,7 +49,7 @@ $ grunt push:git
 >> Pushed to origin
 ````
 
-Sometimes you want to run another task between bumping the version and commiting, for instance generate changelog. You can use `bump-only` and `bump-commit` to achieve that:
+Sometimes you want to run another task between bumping the version and commiting, for instance generate changelog. You can use `push-only` and `push-commit` to achieve that:
 
 ```bash
 $ grunt push-only:minor
