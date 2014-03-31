@@ -256,7 +256,7 @@ module.exports = function(grunt) {
 
   // ALIASES
   DESC = 'Increment the version only.';
-  grunt.registerTask('bump-only', DESC, function(versionType) {
+  grunt.registerTask('push-only', DESC, function(versionType) {
     grunt.task.run('push:' + (versionType || '') + ':bump-only');
   });
 
