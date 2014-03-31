@@ -89,29 +89,29 @@ module.exports = function(grunt) {
 
 
     // MAKE SURE WE'RE ON A RELEASE BRANCH
-    runIf(opts.releaseBranch, function() {
-      if (opts.npm || opts.commit || opts.push) {
-        exec('git rev-parse --abbrev-ref HEAD', function(err, stdout, stderr) {
-          
-          if (err || stderr) {
-            grunt.fatal('Cannot determine current branch.');
+    runIf(opts.releaseBranch && (opts.npm || opts.commit || opts.push), function() {
+      exec('git rev-parse --abbrev-ref HEAD', function(err, stdout, stderr) {
+
+        if (err || stderr) {
+          grunt.fatal('Cannot determine current branch.');
+        }
+
+        var currentBranch = stdout.trim();
+        var rBranches = (typeof opts.releaseBranch == 'string') ? [opts.releaseBranch] : opts.releaseBranch;
+
+        for (var i = rBranches.length - 1; i >= 0; i--) {
+          console.log('<'+rBranches[i] + "> - <" + currentBranch+'>');
+          if (rBranches[i] == currentBranch) {
+            return next();
           }
+        }
 
-          var currentBranch = stdout.trim();
-          var rBranches = (typeof opts.releaseBranch == 'string') ? [opts.releaseBranch] : opts.releaseBranch;
+        grunt.warn('The current branch is not in the list of release branches.');
 
-          rBranches.forEach(function(rBranch) {
-            if (rBranch == currentBranch) {
-              return next();
-            }
-          });
+        // Allow for --force
+        next();
 
-          grunt.warn('The current branch is not in the list of release branches.');
-
-          // Allow for --force
-          next();
-        });
-      }
+      });
     });
     
 
